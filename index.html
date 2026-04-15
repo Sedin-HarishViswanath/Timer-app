@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro Timer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="timer-card" aria-label="Pomodoro timer">
+        <header class="timer-header">
+          <p class="eyebrow">Focus Clock</p>
+          <h1>Pomodoro Timer</h1>
+        </header>
+
+        <div class="dial-wrap" aria-live="polite" aria-atomic="true">
+          <p id="modeLabel" class="mode-label">Work Session</p>
+          <div class="dial">
+            <div class="session-gif-wrap">
+              <img
+                id="sessionGif"
+                class="session-gif"
+                src="./assets/time-is-up-rabbit-time.gif"
+                alt="Current session visual"
+              />
+              <img
+                id="pausePopImage"
+                class="pause-pop-image"
+                src="./assets/4bc9b6ef7fa57584e2f83564edfd3034.jpg"
+                alt="Paused visual"
+              />
+            </div>
+          </div>
+          <p id="timeDisplay" class="time-display">25:00</p>
+          <p id="statusText" class="status-text">Ready</p>
+        </div>
+
+        <div class="controls" role="group" aria-label="Timer controls">
+          <button id="startBtn" class="btn btn-primary" type="button">Start</button>
+          <button id="pauseBtn" class="btn" type="button">Pause</button>
+          <button id="resetBtn" class="btn" type="button">Reset</button>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
